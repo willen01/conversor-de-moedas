@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor</title>
+</head>
+
+<body>
+
+    <div class="content">
+        <P id="title">Conversor de Moedas</P>
+        <div class="data">
+            <label for="opt" class="description" id="selectCoin">Selecione a moeda desejada:</label>
+            <select name="" id="opt" onchange="change(this.value)">
+                <option value="NOT">--</option>
+                <option value="ARS">Peso Argentino</option>
+                <option value="AUD">Dolar Australiano</option>
+                <option value="BTC">Bitcoin</option>
+                <option value="CAD">Dolar Canadense</option>
+                <option value="CHF">Franco Suiço</option>
+                <option value="CNY">Yuan Chines</option>
+                <option value="DOGE">Dodge Coin</option>
+                <option value="ETH">Ethereum</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">Libra Esterlina</option>
+                <option value="ILS">Novo Shekel Israelense</option>
+                <option value="JPY">Iene Japonês</option>
+                <option value="LTC">Litecoin</option>
+                <option value="USD">Dolar Americano</option>
+                <option value="USDT">Dolar Turismo</option>
+            </select>
+
+            <label for="entrada" class="description" id="insertValue">Inserir Valor:</label>
+            <input type="text" id="entrada">
+            <button id="btnConv">converter</button>
+        </div>
+
+        <div class="resp">
+            <p id="leg"></p>
+            <p id="res"></p>
+        </div>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+
+</html>
