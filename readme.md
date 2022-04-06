@@ -1,6 +1,6 @@
 ## Descrição
 
-Neste projeto temos um conversor de moedas estrangeiras para real. Para sua construção foram utilizadas as seguintes tecnologias: html css e javascript. Para se obter a cotação atualizada dass moedas trabalhada, o projeto faz o consumo da api do site economia.awesomeapi.com.br. Para obter a lista completa com os dados em em formato json <a href='https://economia.awesomeapi.com.br/json/all'>Clique aqui</a>.
+Neste projeto temos um conversor de moedas estrangeiras para real. Para sua construção foram utilizadas as seguintes tecnologias: html css e javascript. Para se obter a cotação atualizada das moedas trabalhadas, o projeto faz o consumo da uma api do site economia.awesomeapi.com.br. Para obter a lista completa com os dados em formato json <a href='https://economia.awesomeapi.com.br/json/all'>Clique aqui</a>.
 
 Para visualizar o projeto completo, <a href='https://willen01.github.io/conversor-de-moedas/'>Clique aqui</a>
 
