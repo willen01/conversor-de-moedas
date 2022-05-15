@@ -5,27 +5,34 @@ let btn = document.getElementById('btnConv');
 let result = document.getElementById('res');
 let leg = document.getElementById('leg');
 
+//pegar só o objeto selecionado
 
 async function change(opcaoSelecionada) {
     let api = fetch(url)
     let dados = await api.then(res => res.json());
 
+
     for (let moeda in dados) {
+
         if (opcaoSelecionada == moeda) {
+
             btn.onclick = function () {
-                let rate = dados[moeda].bid;
-                let nome = dados[moeda].name.replace('/Real Brasileiro', ' para Real:');
+
+                let rate = dados[moeda].ask;
                 let valor = entrada.value;
                 let res = rate * valor;
 
-                if (!entrada.value || opt.options[opt.selectedIndex].value == 'NOT') {
+                let nume = res.toString()
+   
+                if(!entrada.value || opt.options[opt.selectedIndex].value == 'NOT'){
                     alert('selecione uma moeda ou valor para converter 😉');
+                } else if (nume.length == 6) {
+                    let mask = new Intl.NumberFormat("pr-BR", { style: "currency", currency: "BRL" }).format(nume);
+                    result.innerHTML = mask + " Reais";
                 } else {
-                    leg.innerHTML = nome;
-
-                    let num = `R$ ${res.toFixed(2)} Reais`;
-
-                    result.innerHTML = num.replace('.', ',');
+                    nume = nume + ",00"
+                    console.log(nume)
+                    result.innerHTML = "R$ " + nume + " Reais";
                 }
             }
         }
