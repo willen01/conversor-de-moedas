@@ -13,13 +13,12 @@
 
     <div class="content">
         <P id="title">Conversor de Moedas</P>
-        <div class="data">
+        <form class="data">
             <label for="opt" class="description" id="selectCoin">Selecione a moeda desejada:</label>
             <select name="" id="opt" onchange="change(this.value)">
                 <option value="NOT">--</option>
                 <option value="ARS">Peso Argentino</option>
                 <option value="AUD">Dolar Australiano</option>
-                <option value="BTC">Bitcoin</option>
                 <option value="CAD">Dolar Canadense</option>
                 <option value="CHF">Franco Suiço</option>
                 <option value="CNY">Yuan Chines</option>
@@ -36,7 +35,7 @@
             <label for="entrada" class="description" id="insertValue" >Inserir Valor:</label>
             <input type="text" id="entrada">
             <button id="btnConv">converter</button>
-        </div>
+        </form>
 
         <div class="resp">
             <p id="leg"></p>
