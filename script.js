@@ -16,30 +16,28 @@ async function change(opcaoSelecionada) {
 
         if (opcaoSelecionada == moeda) {
 
-            btn.onclick = function () {
+            btn.onclick = function (element) {
 
                 let rate = dados[moeda].ask;
                 let valor = entrada.value;
                 let res = rate * valor;
-
                 let nume = res.toString()
-   
-                if(!entrada.value || opt.options[opt.selectedIndex].value == 'NOT'){
+
+                element.preventDefault();
+
+                if (!entrada.value || opt.options[opt.selectedIndex].value == 'NOT') {
                     alert('selecione uma moeda ou valor para converter 😉');
                 } else if (nume.length == 6) {
                     let mask = new Intl.NumberFormat("pr-BR", { style: "currency", currency: "BRL" }).format(nume);
                     result.innerHTML = mask + " Reais";
-                } else {
-                    nume = nume + ",00"
-                    console.log(nume)
-                    result.innerHTML = "R$ " + nume + " Reais";
                 }
             }
         }
     }
 }
 
-btn.onclick = function () {
+btn.onclick = function (element) {
+    element.preventDefault()
     if (opt.options[opt.selectedIndex].value == 'NOT') {
         alert('selecione uma moeda ou valor para converter 😉');
     }
